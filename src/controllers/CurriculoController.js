@@ -20,7 +20,7 @@ module.exports = {
 
       return res.json(profile);
 
-    } catch (error) {
+    } catch (err) {
       console.error('ERROR: Problemas com o a Aplicação!');
     }
   }
