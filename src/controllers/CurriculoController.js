@@ -6,7 +6,7 @@ module.exports = {
   async show(req, res) {
 
     try {
-      const apiFace = await axios.get(`https://graph.facebook.com/v5.0/me?fields=name%2Cbirthday%2Cgender%2Cemail%2Clocation%2Cphotos.limit(1)&access_token=${process.env.FACE_TOKEN}`);
+      const apiFace = await axios.get(`${process.env.FACE_TOKEN}`);
       const apiGit = await axios.get('https://api.github.com/users/joseiltonjunior');
 
       const { name = login, html_url, bio, repos_url, avatar_url } = apiGit.data;
