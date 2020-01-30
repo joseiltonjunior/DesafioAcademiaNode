@@ -20,7 +20,7 @@ module.exports = {
       return res.json(profile);
     }
     catch (err) {
-      console.error('Deu ruim!');
+      console.error('ERROR: Problemas com o a Aplicação!');
     }
   }
 }
