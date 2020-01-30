@@ -12,9 +12,11 @@ routes.get('/', (req, res) => {
 routes.get('/github', GithubController.show);
 routes.get('/face', FaceController.show);
 
-routes.get('/curriculo', (req, res) => {
-  res.render('curriculo');
+routes.get('*', (req, res) => {
+  res.status(404).send('Rota inexistente');
 });
+
+
 
 
 
