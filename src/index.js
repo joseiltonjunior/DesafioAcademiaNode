@@ -10,6 +10,6 @@ app.use(routes);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
   console.log(`Servidor rodando em http://localhost:${port}`);
 })
