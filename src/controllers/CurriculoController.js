@@ -8,7 +8,7 @@ module.exports = {
   async show(req, res) {
 
     try {
-      const apiFace = await FacebookService.get(`/me?fields=id%2Cname%2Cbirthday%2Clocation%2Cgender&access_token=${process.env.FACE_TOKEN}`);
+      const apiFace = await FacebookService.get(`/me?fields=name%2Cbirthday%2Cgender%2Cemail%2Clocation&access_token=${process.env.FACE_TOKEN}`);
       const apiGit = await GithubService.get();
       const apiRepo = await GithubService.get('/repos');
 
